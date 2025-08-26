@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Can't Find Your Book? | Book Bazar 📚</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', sans-serif;
+        }
+
+        body,
+        html {
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+            color: #fff;
+        }
+
+        .background-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            overflow: hidden;
+            z-index: -1;
+        }
+
+        .background-container video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 80px auto;
+            padding: 30px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 20px;
+            backdrop-filter: blur(15px);
+            box-shadow: 0 0 30px rgba(255, 255, 255, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 32px;
+            margin-bottom: 20px;
+            color: #00ffd5;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        input,
+        select,
+        textarea,
+        button {
+            padding: 12px;
+            border-radius: 10px;
+            border: none;
+            outline: none;
+            font-size: 16px;
+        }
+
+        input,
+        select,
+        textarea {
+            background: rgb(0, 0, 0);
+            color: #fff;
+        }
+
+        input::placeholder,
+        textarea::placeholder {
+            color: #ccc;
+        }
+
+        button {
+            background-color: #00c896;
+            color: #000;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        button:hover {
+            background-color: #00a87c;
+        }
+
+        .section {
+            margin-top: 40px;
+        }
+
+        .section h2 {
+            margin-bottom: 15px;
+            color: #ffd700;
+        }
+
+        .frequent-books {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .frequent-books .book {
+            background: rgba(255, 255, 255, 0.08);
+            padding: 10px 15px;
+            border-radius: 12px;
+            backdrop-filter: blur(10px);
+        }
+
+        .note {
+            font-style: italic;
+            font-size: 14px;
+            color: #ccc;
+            margin-top: 10px;
+        }
+
+        .wishlist-link {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .wishlist-link a {
+            color: #00ffd5;
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="background-container">
+        <video autoplay muted loop playsinline>
+            <source src="https://videos.pexels.com/video-files/5818973/5818973-uhd_2560_1440_24fps.mp4"
+                type="video/mp4">
+        </video>
+    </div>
+
+    <div class="container">
+        <h1>Can't Find Your Book? Let Us Know! 📬</h1>
+
+        <form>
+            <input type="text" placeholder="Book Title (required)" required />
+            <input type="text" placeholder="Author Name (optional)" />
+            <select>
+                <option value="">Select Category</option>
+                <option>Motivational</option>
+                <option>Competitive</option>
+                <option>Horror</option>
+                <option>Adventure</option>
+                <option>Novels</option>
+                <option>Poetry</option>
+            </select>
+            <textarea rows="4" placeholder="Any additional info or message..."></textarea>
+            <input type="email" placeholder="Your Email (we’ll notify you)" required />
+            <button type="submit">Submit Request</button>
+        </form>
+
+
+        <div class="section">
+            <h2>📚 Recently Requested Books</h2>
+            <div class="frequent-books">
+                <div class="book">"Rich Dad Poor Dad" - Robert Kiyosaki</div>
+                <div class="book">"Atomic Habits" - James Clear</div>
+                <div class="book">"UPSC Strategy Guide 2024"</div>
+                <div class="book">"Invisible Man" - Ralph Ellison</div>
+                <div class="book">"Wings of Fire" - A.P.J. Abdul Kalam</div>
+                <div class="book">"The Silent Patient" - Alex Michaelides</div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>🤝 Why Request a Book?</h2>
+            <p>We update our book list regularly based on user interest. If a book is important to you, it’s important
+                to us too. Drop a request and we’ll try our best to bring it to you!</p>
+        </div>
+    </div>
+</body>
+
+</html>
